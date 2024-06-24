@@ -1,0 +1,25 @@
+uuid: 7e7f369f-b480-419b-a1fd-b4c1c220cf59
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.admin-menu
+  module:
+    - system
+  theme:
+    - olivero
+id: olivero_adminmenu
+theme: olivero
+region: highlighted
+weight: -4
+provider: null
+plugin: 'system_menu_block:admin-menu'
+settings:
+  id: 'system_menu_block:admin-menu'
+  label: 'Admin Menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

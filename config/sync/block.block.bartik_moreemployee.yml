@@ -1,0 +1,41 @@
+uuid: 7a50e5e9-6ca9-4931-afc9-3ab9a59cdb8a
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.more-employee
+  module:
+    - system
+    - user
+  theme:
+    - bartik
+id: bartik_moreemployee
+theme: bartik
+region: featured_bottom_second
+weight: -9
+provider: null
+plugin: 'system_menu_block:more-employee'
+settings:
+  id: 'system_menu_block:more-employee'
+  label: 'More employee'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /homepage
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      anonymous: anonymous
+      authenticated: authenticated
+      content_editor: content_editor
+      administrator: administrator
+      blogger: blogger

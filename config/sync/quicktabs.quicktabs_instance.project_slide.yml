@@ -1,0 +1,84 @@
+uuid: bd9b5640-a264-48b3-b208-65965ffca3f5
+langcode: en
+status: true
+dependencies: {  }
+id: project_slide
+label: 'Project Slide'
+renderer: quick_tabs
+hide_empty_tabs: false
+default_tab: 9999
+options:
+  quick_tabs:
+    ajax: false
+    class: ''
+    style: tabsbar
+configuration_data:
+  -
+    title: 'Project 1'
+    weight: 0
+    type: node_content
+    content:
+      node_content:
+        options:
+          nid: '6'
+          view_mode: full
+          hide_title: false
+      view_content:
+        options:
+          vid: all_blogs
+          display: default
+          args: ''
+      block_content:
+        options:
+          bid: 'views_block:projects-block_1'
+          block_title: ''
+          display_title: false
+      qtabs_content:
+        options:
+          machine_name: ''
+  -
+    title: 'Project  2'
+    weight: 0
+    type: node_content
+    content:
+      node_content:
+        options:
+          nid: '7'
+          view_mode: full
+          hide_title: false
+      view_content:
+        options:
+          vid: all_blogs
+          display: default
+          args: ''
+      block_content:
+        options:
+          bid: announce_block
+          block_title: ''
+          display_title: false
+      qtabs_content:
+        options:
+          machine_name: ''
+  -
+    title: 'Prject 3 '
+    weight: 0
+    type: node_content
+    content:
+      node_content:
+        options:
+          nid: '8'
+          view_mode: full
+          hide_title: false
+      view_content:
+        options:
+          vid: all_blogs
+          display: default
+          args: ''
+      block_content:
+        options:
+          bid: announce_block
+          block_title: ''
+          display_title: false
+      qtabs_content:
+        options:
+          machine_name: ''

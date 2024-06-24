@@ -3,11 +3,55 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.user.user.field_age
+    - field.field.user.user.field_company
+    - field.field.user.user.field_goals
+    - field.field.user.user.field_key_characterstics
+    - field.field.user.user.field_project
+    - field.field.user.user.field_salary
+    - field.field.user.user.field_skills
+    - field.field.user.user.field_title
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
+    - field_group
     - image
+    - layout_builder
+    - layout_discovery
     - user
+third_party_settings:
+  field_group:
+    group_background:
+      children:
+        - field_age
+        - field_company
+        - field_salary
+      label: Background
+      parent_name: ''
+      region: content
+      weight: 2
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+    group_tech_skills:
+      children:
+        - field_skills
+      label: 'Tech Skills'
+      parent_name: ''
+      region: content
+      weight: 3
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+  layout_builder:
+    enabled: false
+    allow_custom: false
 _core:
   default_config_hash: mZLyuWM9CQx2ZJVqFGSbzgFnHzudVbHBYmdU256A5Wk
 id: user.user.default
@@ -15,18 +59,73 @@ targetEntityType: user
 bundle: user
 mode: default
 content:
-  member_for:
+  field_age:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_company:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
     weight: 5
+    region: content
+  field_goals:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_key_characterstics:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_salary:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_skills:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
     region: content
   user_picture:
     type: image
     label: hidden
     settings:
-      image_style: thumbnail
       image_link: content
+      image_style: thumbnail
       image_loading:
         attribute: lazy
     third_party_settings: {  }
     weight: 0
     region: content
-hidden: {  }
+hidden:
+  field_project: true
+  member_for: true

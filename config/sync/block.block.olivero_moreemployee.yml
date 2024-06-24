@@ -1,0 +1,29 @@
+uuid: 8dc8277d-b878-4928-bedf-8c9d837afc15
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.more-employee
+  module:
+    - system
+  theme:
+    - olivero
+id: olivero_moreemployee
+theme: olivero
+region: content_above
+weight: -10
+provider: null
+plugin: 'system_menu_block:more-employee'
+settings:
+  id: 'system_menu_block:more-employee'
+  label: 'More employee'
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /homepage

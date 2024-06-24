@@ -1,0 +1,30 @@
+uuid: 1a85af1a-0371-44da-94c0-5238b230770b
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.user_projects
+  module:
+    - system
+    - views
+  theme:
+    - bartik
+id: bartik_views_block__user_projects_block_1_2
+theme: bartik
+region: sidebar_second
+weight: -8
+provider: null
+plugin: 'views_block:user_projects-block_1'
+settings:
+  id: 'views_block:user_projects-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  context_mapping: {  }
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/user/*'

@@ -1,0 +1,11 @@
+uuid: 54335041-7fd7-422a-9d67-03a3a3c8beea
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.homepage_viewmode
+label: 'HomePage Viewmode'
+description: ''
+targetEntityType: node
+cache: true

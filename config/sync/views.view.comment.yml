@@ -2,6 +2,11 @@ uuid: 56962eeb-39f9-46ba-8fa0-e3c208d9e0ad
 langcode: en
 status: true
 dependencies:
+  config:
+    - user.role.administrator
+    - user.role.authenticated
+    - user.role.blogger
+    - user.role.content_editor
   module:
     - comment
     - user
@@ -561,9 +566,13 @@ display:
           sort_asc_label: Asc
           sort_desc_label: Desc
       access:
-        type: perm
+        type: role
         options:
-          perm: 'administer comments'
+          role:
+            authenticated: authenticated
+            content_editor: content_editor
+            administrator: administrator
+            blogger: blogger
       cache:
         type: tag
         options: {  }
@@ -871,7 +880,7 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
-        - user.permissions
+        - user.roles
       tags: {  }
       cacheable: false
   page_published:
@@ -900,7 +909,7 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
-        - user.permissions
+        - user.roles
       tags: {  }
       cacheable: false
   page_unapproved:
@@ -1611,6 +1620,6 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
-        - user.permissions
+        - user.roles
       tags: {  }
       cacheable: false

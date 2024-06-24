@@ -21,12 +21,15 @@ module:
   dynamic_page_cache: 0
   editor: 0
   field: 0
+  field_group: 0
   field_ui: 0
   file: 0
   filter: 0
   help: 0
   history: 0
   image: 0
+  layout_builder: 0
+  layout_discovery: 0
   link: 0
   menu_link_content: 0
   menu_ui: 0
@@ -36,6 +39,7 @@ module:
   page_cache: 0
   path: 0
   path_alias: 0
+  quicktabs: 0
   search: 0
   shortcut: 0
   system: 0
@@ -46,9 +50,11 @@ module:
   user: 0
   views_ui: 0
   webform: 0
+  ds: 1
   views: 10
   standard: 1000
 theme:
   olivero: 0
   claro: 0
+  bartik: 0
 profile: standard

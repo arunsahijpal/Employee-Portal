@@ -1,0 +1,25 @@
+uuid: 98bfb44b-6a22-4d41-9ce6-6498b294cf89
+langcode: en
+status: true
+dependencies:
+  module:
+    - quicktabs
+    - system
+  theme:
+    - olivero
+id: olivero_quicktabsprojectslide
+theme: olivero
+region: content_below
+weight: -12
+provider: null
+plugin: 'quicktabs_block:project_slide'
+settings:
+  id: 'quicktabs_block:project_slide'
+  label: 'QuickTabs - Project Slide'
+  label_display: visible
+  provider: quicktabs
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /homepage

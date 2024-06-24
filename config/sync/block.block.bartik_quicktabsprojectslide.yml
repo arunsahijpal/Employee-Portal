@@ -1,0 +1,25 @@
+uuid: a0bab93b-0f94-4855-99c4-5e14a87181c9
+langcode: en
+status: true
+dependencies:
+  module:
+    - quicktabs
+    - system
+  theme:
+    - bartik
+id: bartik_quicktabsprojectslide
+theme: bartik
+region: featured_bottom_second
+weight: -8
+provider: null
+plugin: 'quicktabs_block:project_slide'
+settings:
+  id: 'quicktabs_block:project_slide'
+  label: 'QuickTabs - Project Slide'
+  label_display: '0'
+  provider: quicktabs
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /homepage

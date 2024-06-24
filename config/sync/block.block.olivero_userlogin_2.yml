@@ -1,0 +1,20 @@
+uuid: f70af871-210d-4f53-aa86-99aaf32a3831
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+  theme:
+    - olivero
+id: olivero_userlogin_2
+theme: olivero
+region: sidebar
+weight: -10
+provider: null
+plugin: user_login_block
+settings:
+  id: user_login_block
+  label: 'User login'
+  label_display: visible
+  provider: user
+visibility: {  }
